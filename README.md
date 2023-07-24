@@ -11,3 +11,6 @@
 
 - fish
 - vscode
+- ocaml
+- coq
+- coq-lsp
