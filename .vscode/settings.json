@@ -10,5 +10,18 @@
       "args": ["-C", "source ${workspaceFolder}/scripts/track-history.fish"]
     }
   },
-  "gitlens.views.commits.files.layout": "tree"
+  "gitlens.views.commits.files.layout": "tree",
+  "files.exclude": {
+    "**/*.vo": true,
+    "**/*.vok": true,
+    "**/*.vos": true,
+    "**/*.aux": true,
+    "**/*.glob": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  }
 }
