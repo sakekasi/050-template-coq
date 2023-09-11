@@ -20,5 +20,15 @@ RUN echo $(ocaml --version)
 RUN echo $(coqc -v)
 RUN echo $(coq-lsp --version)
 
+COPY --chown=coq Cpdt /home/coq/Cpdt
+
+ENV PATH="${PATH}:/home/coq/.opam/4.13.1+flambda/bin"
+
+RUN cd /home/coq/Cpdt \
+  && coq_makefile -f _CoqProject -o Makefile \
+  && make \
+  && make install
+
+WORKDIR /workspace
 
 CMD ["fish"]
